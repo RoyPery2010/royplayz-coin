@@ -50,6 +50,6 @@ contract("RoyPlayzCoin", function(accounts) {
 			return tokenInstance.balanceOf(accounts[0]);
 		}).then(function(balance) {
 			assert.equal(balance.toNumber(), 999750000, "deducts the amount from the sending account");	
-		});
+		})
 	});
 });
