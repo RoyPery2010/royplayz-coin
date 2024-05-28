@@ -23,6 +23,9 @@ contract RoyPlayzCoin {
 		balanceOf[msg.sender] -= _value;
 		balanceOf[_to] += _value;
 		emit Transfer(msg.sender, _to, _value);
+		balanceOf[_from] -= _value;
+		balanceOf[_to] += _value;
+		allowance[_from][msg.sender] -= _value;
 		return true;
 	}
 }
